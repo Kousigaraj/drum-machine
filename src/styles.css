@@ -18,13 +18,12 @@
 
 #drum-machine {
   border: 5px solid blue;
-  width: 40%;
-  height: auto;
   text-align: center;
   background-color: white;
   padding: 30px;
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -32,7 +31,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  width: 50%;
 }
 
 .drum-pad {
@@ -47,7 +45,6 @@
 
 .control {
   text-align: center;
-  width: 30%;
 }
 
 .power {
@@ -94,11 +91,15 @@
   padding: 20px 10px;
 }
 
-.volume-slider {
-}
-
 .drum-pad.active {
   background-color: blue;
   border-color: blue;
   box-shadow: none;
+}
+
+@media screen and (max-width: 769px) {
+  #drum-machine {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 }
